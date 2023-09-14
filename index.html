@@ -57,7 +57,7 @@
           <div class="header-spacer container"></div>
 
           <div class="menu-toggle">
-            <button id="menu-toggler" data-toggle-menu aria-label="Open the menu">
+            <button id="menu-toggler" data-menu-toggle aria-label="Open the menu">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
@@ -74,11 +74,24 @@
     <section class="home-section">
       <div class="container">
         <div class="row main-grid">
-          <div class="data-column column">
+          <div class="content-column">
             <div class="headline">collection 2020</div>
             <h3 class="section-title title-500">New Arrivals</h4>
             <p>Mattis nisl eu quam elementum vulputate ultrices blandit. Congue molestie et varius risus, tristique fermentum purus nunc sed. Et tristique cursus felis placerat proin aliquam. Faucibus aliquam nam morbi volutpat scelerisque cursus in est. Posuere lacus risus faucibus a morbi aliquam malesuada sed sed.</p>
             <a href="#" class="text-btn">Shop now</a>
+          </div>
+
+          <div class="video-popup-column">
+            <div class="video-popup-image-wrapper" data-video-popup-image data-popup-video-src="/assets/videos/popup-video.mp4">
+              <img class="video-popup-image" src="/assets/images/home-section/video-popup-image.jpg" alt="video popup image">
+              <button class="video-popup-icon" data-video-popup-open>
+                <img src="/assets/images/icons/video-popup-icon.svg" alt="video popup">
+              </button>
+            </div>
+          </div>
+
+          <div class="image-column">
+            <img src="/assets/images/home-section/home-image.jpg" alt="two models in red outfit">
           </div>
         </div>
       </div>
