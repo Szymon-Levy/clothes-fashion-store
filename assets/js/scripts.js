@@ -1,4 +1,43 @@
 /**
+   * HIDE PRELOADER
+    */
+const $preloader = document.querySelector('#preloader')
+
+if ($preloader){
+  setTimeout(() => {
+    $preloader.classList.add('active')
+
+    /**
+       * SCROLL ANIMATIONS
+        */
+
+    ScrollReveal().reveal('.home-section .image-column', { 
+      delay: 400,
+      distance: '80px',
+      duration: 1000,
+      origin: 'right',
+      scale: 0.8
+    });
+
+    ScrollReveal().reveal('.home-section .section-title', { 
+      delay: 400,
+      distance: '50px',
+      duration: 1000,
+      origin: 'left',
+    });
+
+    ScrollReveal().reveal('.home-section .content-column p', { 
+      delay: 400,
+      distance: '50px',
+      duration: 1200,
+      origin: 'right',
+    });
+
+  }, 300)
+}
+
+
+/**
    * SET SIDE SPACE
     */
 
@@ -15,6 +54,25 @@ getSideSpace()
 window.addEventListener('resize', function(event){
   getSideSpace()
 });
+
+
+/**
+   * MOBILE MENU
+    */
+
+const offcanvasMenu = document.querySelector('[data-offcanvas-menu]'),
+      offcanvasMenuToggler = document.querySelector('[data-offcanvas-toggler]')
+
+if( offcanvasMenuToggler ){
+  offcanvasMenu.classList.add('inactive')
+  offcanvasMenuToggler.addEventListener('click', () =>{
+    offcanvasMenu.classList.toggle('active')
+    offcanvasMenu.classList.toggle('inactive')
+
+    const header = document.querySelector('[data-header]')
+    header.classList.toggle('active-offcanvas')
+  })
+}
 
 
 /**
@@ -61,3 +119,29 @@ if ( $videoPopupsImagesElements.length ){
   })
 }
 
+
+/**
+   * SCROLL ANIMATIONS
+    */
+
+// ScrollReveal().reveal('.home-section .image-column', { 
+//   delay: 700,
+//   distance: '80px',
+//   duration: 1000,
+//   origin: 'right',
+//   scale: 0.8
+// });
+
+// ScrollReveal().reveal('.home-section .section-title', { 
+//   delay: 700,
+//   distance: '50px',
+//   duration: 1000,
+//   origin: 'left',
+// });
+
+// ScrollReveal().reveal('.home-section .content-column p', { 
+//   delay: 700,
+//   distance: '50px',
+//   duration: 1200,
+//   origin: 'right',
+// });

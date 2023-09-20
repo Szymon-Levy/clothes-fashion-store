@@ -19,6 +19,12 @@
 <body>
 
   <!--
+    - #PRELOADER
+  -->
+
+  <div id="preloader"></div>
+
+  <!--
     - #BG LINES
   -->
 
@@ -42,6 +48,14 @@
   <div class="body-wrapper">
 
     <!--
+    - #NAV
+    -->
+
+    <nav class="offcanvas-menu" data-offcanvas-menu>
+
+    </nav>
+
+    <!--
     - #HEADER
     -->
 
@@ -49,7 +63,7 @@
       <div class="container-full">
         <div class="row">
           <div class="logo">
-            <a href="#">
+            <a href="/">
               <img src="/assets/images/logo/logo.svg" alt="page logo">
             </a>
           </div>
@@ -57,7 +71,7 @@
           <div class="header-spacer container"></div>
 
           <div class="menu-toggle">
-            <button id="menu-toggler" data-menu-toggle aria-label="Open the menu">
+            <button id="menu-toggler" data-offcanvas-toggler aria-label="Open the menu">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
@@ -83,7 +97,7 @@
 
           <div class="video-popup-column">
             <div class="video-popup-image-wrapper" data-video-popup-image data-popup-video-src="/assets/videos/popup-video.mp4">
-              <img class="video-popup-image" src="/assets/images/home-section/video-popup-image.jpg" alt="video popup image">
+              <img class="video-popup-image" src="/assets/images/home-section/video-popup-image.webp" alt="video popup image">
               <button class="video-popup-icon" data-video-popup-open>
                 <img src="/assets/images/icons/video-popup-icon.svg" alt="video popup">
               </button>
@@ -91,7 +105,32 @@
           </div>
 
           <div class="image-column">
-            <img src="/assets/images/home-section/home-image.jpg" alt="two models in red outfit">
+            <img src="/assets/images/home-section/home-image.webp" alt="two models in red outfit">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    - #NEW
+    -->
+
+    <section class="new-section text-image-sided">
+      <div class="container">
+        <div class="row main-grid has-bg-text">
+          <div class="bg-text">
+            <span>new</span>
+          </div>
+
+          <div class="content-column">
+            <div class="headline">collection 2020</div>
+            <h3 class="section-title title-500">Black <br>& White</h4>
+            <p>Mattis nisl eu quam elementum vulputate ultrices blandit. Congue molestie et varius risus, tristique fermentum purus nunc sed. Et tristique cursus felis placerat proin aliquam. Faucibus aliquam nam morbi volutpat scelerisque cursus in est. Posuere lacus risus faucibus a morbi aliquam malesuada sed sed.</p>
+            <a href="#" class="text-btn">Shop collection</a>
+          </div>
+
+          <div class="image-column">
+            <img src="/assets/images/new-image.jpg" alt="two models in black and white outfit">
           </div>
         </div>
       </div>
@@ -108,6 +147,11 @@
 
 
   </div>
+
+  <!--
+    -ScrollReveal
+  -->
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <!--
     -custom js link
