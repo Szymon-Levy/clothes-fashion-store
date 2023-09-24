@@ -2,39 +2,71 @@
    * HIDE PRELOADER
     */
 const $preloader = document.querySelector('#preloader')
+let isPreloader = true
+let animationDelay = 0
 
 if ($preloader){
   setTimeout(() => {
     $preloader.classList.add('active')
+  }, 300)
+}
 
-    /**
+
+/**
        * SCROLL ANIMATIONS
         */
 
-    ScrollReveal().reveal('.home-section .image-column', { 
-      delay: 400,
-      distance: '80px',
-      duration: 1000,
-      origin: 'right',
-      scale: 0.8
-    });
-
-    ScrollReveal().reveal('.home-section .section-title', { 
-      delay: 400,
-      distance: '50px',
-      duration: 1000,
-      origin: 'left',
-    });
-
-    ScrollReveal().reveal('.home-section .content-column p', { 
-      delay: 400,
-      distance: '50px',
-      duration: 1200,
-      origin: 'right',
-    });
-
-  }, 300)
+const headingSlideFromLeft = {
+  delay: 500,
+  useDelay: 'onload',
+  distance: '50px',
+  duration: 1900,
+  origin: 'left',
 }
+
+ScrollReveal().reveal('[data-heading-slide-from-left]', headingSlideFromLeft);
+
+const headingSlideFromRight = {
+  delay: 500,
+  useDelay: 'onload',
+  distance: '50px',
+  duration: 1900,
+  origin: 'right',
+}
+
+ScrollReveal().reveal('[data-heading-slide-from-right]', headingSlideFromRight);
+
+const textContentSlideFromBottom = {
+  delay: 500,
+  useDelay: 'onload',
+  distance: '50px',
+  duration: 2500,
+  origin: 'bottom',
+}
+
+ScrollReveal().reveal('[data-text-content-slide-from-bottom]', textContentSlideFromBottom);
+
+const imageSlideFromRight = {
+  delay: 500,
+  useDelay: 'onload',
+  distance: '80px',
+  duration: 1900,
+  origin: 'right',
+  scale: 0.8
+}
+
+ScrollReveal().reveal('[data-image-slide-from-right]', imageSlideFromRight);
+
+const imageSlideFromLeft = {
+  delay: 500,
+  useDelay: 'onload',
+  distance: '80px',
+  duration: 1900,
+  origin: 'left',
+  scale: 0.8
+}
+
+ScrollReveal().reveal('[data-image-slide-from-left]', imageSlideFromLeft);
 
 
 /**
@@ -118,30 +150,3 @@ if ( $videoPopupsImagesElements.length ){
     
   })
 }
-
-
-/**
-   * SCROLL ANIMATIONS
-    */
-
-// ScrollReveal().reveal('.home-section .image-column', { 
-//   delay: 700,
-//   distance: '80px',
-//   duration: 1000,
-//   origin: 'right',
-//   scale: 0.8
-// });
-
-// ScrollReveal().reveal('.home-section .section-title', { 
-//   delay: 700,
-//   distance: '50px',
-//   duration: 1000,
-//   origin: 'left',
-// });
-
-// ScrollReveal().reveal('.home-section .content-column p', { 
-//   delay: 700,
-//   distance: '50px',
-//   duration: 1200,
-//   origin: 'right',
-// });

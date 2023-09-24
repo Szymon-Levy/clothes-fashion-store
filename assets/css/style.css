@@ -195,6 +195,7 @@ body{
 .bg-text{
   display: none;
   position: absolute;
+  width: calc(100% / 5);
   font-size: var(--side-space-dynamic);
   color: var(--color-bg-text);
   font-weight: 700;
@@ -538,17 +539,18 @@ body{
 
 
 /*----------------------------------*\
-  #NEW SECTION
+  #NEW SECTION AND BOHO SECTION
 \*----------------------------------*/
 
-.new-section .row {
+.new-section .row,
+.boho-section .row {
   padding-top: 7rem;
 }
 
-.new-section .content-column {
+.new-section .content-column,
+.boho-section .content-column {
   margin-bottom: 5rem;
 }
-
 
 
 
@@ -609,27 +611,41 @@ body{
 
 
   /*----------------------------------*\
-    #NEW SECTION
+    #NEW SECTION AND BOHO SECTION
   \*----------------------------------*/
 
-  .new-section .row {
+  .new-section .row,
+  .boho-section .row {
     padding-top: 15rem;
   }
-  
+
   .text-image-sided .main-grid {
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-flow: column;
     align-items: center;
   }
+  
+  .new-section .main-grid {
+    grid-auto-flow: column;
+  }
 
-  .text-image-sided .image-column{
+  .new-section .image-column{
     grid-column: 1 / 4;
   }
 
-  .text-image-sided .content-column {
+  .new-section .content-column {
     grid-column: 4 / 6;
     margin-bottom: 0;
     padding: 0 0 0 var(--block-text-space-600);
+  }
+
+  .boho-section .content-column{
+    grid-column: 1 / 4;
+    margin-bottom: 0;
+    padding: 0 var(--block-text-space-600);
+  }
+
+  .boho-section .image-column{
+    grid-column: 4 / 6;
   }
 }
 
@@ -712,7 +728,7 @@ body{
 
 
   /*----------------------------------*\
-    #NEW SECTION
+    #NEW SECTION AND BOHO SECTION
   \*----------------------------------*/
 
   .new-section .row {
@@ -727,7 +743,20 @@ body{
     display: block;
     left: 0;
     top: 25px;
-    width: calc(100% / 5);
+  }
+
+  .boho-section .row {
+    padding-top: 29rem;
+  }
+
+  .boho-section .content-column p {
+    max-width: 420px;
+  }
+
+  .boho-section .bg-text{
+    display: block;
+    right: 0;
+    top: 25px;
   }
 
 }
@@ -832,6 +861,15 @@ body{
     height: 980px;
   }
 
+
+  /*----------------------------------*\
+    #NEW SECTION AND BOHO SECTION
+  \*----------------------------------*/
+
+  .boho-section .content-column p {
+    max-width: 500px;
+  }
+
 }
 
 
@@ -850,5 +888,13 @@ body{
     /* font size */
     --fs-title-400: 4.8rem;
     --fs-title-500: 8rem;
+  }
+
+  /*----------------------------------*\
+    #NEW SECTION AND BOHO SECTION
+  \*----------------------------------*/
+
+  .boho-section .content-column p {
+    max-width: 550px;
   }
 }
