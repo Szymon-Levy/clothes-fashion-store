@@ -38,7 +38,7 @@
   --fs-headline: 1.4rem;
   --fs-title-300: 1.8rem;
   --fs-title-400: 3rem;
-  --fs-title-500: 4.5rem;
+  --fs-title-500: 4rem;
   --fs-text-btn: 1.5rem;
   --fs-filled-btn: 1.4rem;
 
@@ -148,7 +148,8 @@ body{
 .title-300{
   font-size: var(--fs-title-300);
   font-weight: 700;
-  line-height: 1.6em;
+  line-height: 1.5em;
+  margin-bottom: .7rem;
 }
 
 .title-400{
@@ -236,6 +237,24 @@ body{
   opacity: .8;
   transform: translateY(-3px);
 }
+
+.filled-btn{
+  display: inline-flex;
+  font-size: var(--fs-filled-btn);
+  font-weight: 700;
+  background-color: var(--color-heading);
+  color: var(--color-white);
+  line-height: 41px;
+  padding: 0 2.2rem;
+  transition: transform var(--transition-time-300), background-color var(--transition-time-300);
+}
+
+.filled-btn:hover,
+.filled-btn:focus-visible{
+  background-color: var(--color-black);
+  transform: scale(1.05);
+}
+
 
 /**
   * VIDEO POPUP
@@ -553,6 +572,25 @@ body{
 }
 
 
+/*----------------------------------*\
+  #NEWSLETTER CALL TO ACTION
+\*----------------------------------*/
+
+.newsletter-section{
+  padding: 7rem 0;
+}
+
+.newsletter-section .newsletter-call-to-action{
+  background-color: var(--color-newsletter-bg);
+  padding: 2.5rem 3.5rem;
+}
+
+.newsletter-section button{
+  margin-top: 1.5rem;
+}
+
+
+/* ANCHOR Breakpoints */
 
 /*----------------------------------*\
   #BREAKPOINTS
@@ -584,6 +622,15 @@ body{
 
   #header .logo img {
     max-width: 100px;
+  }
+
+
+  /*----------------------------------*\
+    #NEWSLETTER CALL TO ACTION
+  \*----------------------------------*/
+
+  .newsletter-section .newsletter-call-to-action{
+    padding: 4.5rem 5.5rem;
   }
 
 }
@@ -646,6 +693,23 @@ body{
 
   .boho-section .image-column{
     grid-column: 4 / 6;
+  }
+
+
+  /*----------------------------------*\
+    #NEWSLETTER CALL TO ACTION
+  \*----------------------------------*/
+
+  .newsletter-section{
+    padding: 15rem 0;
+  }
+
+  .newsletter-section .main-grid{
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .newsletter-section .newsletter-call-to-action{
+    grid-column: 2 / 5;
   }
 }
 
@@ -757,6 +821,18 @@ body{
     display: block;
     right: 0;
     top: 25px;
+  }
+
+  /*----------------------------------*\
+    #NEWSLETTER CALL TO ACTION
+  \*----------------------------------*/
+
+  .newsletter-section .newsletter-call-to-action{
+    display: flex;
+  }
+
+  .newsletter-section .newsletter-call-to-action .content-column{
+    padding-right: 10rem;
   }
 
 }

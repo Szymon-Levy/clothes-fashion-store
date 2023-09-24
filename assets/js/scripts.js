@@ -68,6 +68,18 @@ const imageSlideFromLeft = {
 
 ScrollReveal().reveal('[data-image-slide-from-left]', imageSlideFromLeft);
 
+const newsletterCallToActionAppear = {
+  delay: 500,
+  useDelay: 'onload',
+  duration: 1500,
+  scale: 0.8,
+  rotate: {
+    z: -20
+  }
+}
+
+ScrollReveal().reveal('[data-newsletter-appear]', newsletterCallToActionAppear);
+
 
 /**
    * SET SIDE SPACE
