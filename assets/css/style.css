@@ -622,6 +622,29 @@ body{
 }
 
 
+/*----------------------------------*\
+  #FOOTER
+\*----------------------------------*/
+
+
+#footer{
+  padding: 7rem 0;
+  background-color: rgb(0 0 0 / 3%);
+}
+
+#footer .main-grid {
+  row-gap: 3rem;
+}
+
+#footer .footer-logo img {
+  max-width: 90px;
+}
+
+#footer a {
+  text-decoration: underline;
+}
+
+
 /* ANCHOR Breakpoints */
 
 /*----------------------------------*\
@@ -672,6 +695,34 @@ body{
 
   .blog-posts-section .blog-post-block .blog-post-content {
     padding: var(--block-text-space-400) var(--block-text-space-400) 0;
+  }
+
+
+  /*----------------------------------*\
+    #FOOTER
+  \*----------------------------------*/
+
+  #footer .main-grid{
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  #footer .footer-logo {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer .footer-about {
+    grid-column: 2 / 4;
+  }
+
+  #footer .footer-contact {
+    grid-column: 4 / 6;
+  }
+
+  #footer .footer-about,
+  #footer .footer-contact{
+    padding: 0 3rem;
   }
 
 }
@@ -799,6 +850,20 @@ body{
 
   .blog-posts-section .row.left-side .blog-post-block {
     grid-column: 1 / 5;
+  }
+
+
+  /*----------------------------------*\
+    #FOOTER
+  \*----------------------------------*/
+
+  #footer{
+    padding: 14.5rem 0;
+  }
+
+  #footer .footer-about,
+  #footer .footer-contact{
+    padding: 0 var(--block-text-space-400);
   }
 
 }
@@ -969,6 +1034,32 @@ body{
   .blog-posts-section .blog-post-block .blog-post-content .blog-post-heading,
   .blog-posts-section .blog-post-block .blog-post-content .blog-post-intro{
     padding: 0 var(--block-text-space-400);
+  }
+
+
+  /*----------------------------------*\
+    #FOOTER
+  \*----------------------------------*/
+
+  #footer .footer-logo {
+    grid-column: 2 / 3;
+  }
+
+  #footer .footer-logo img {
+    max-width: 135px;
+  }
+
+  #footer .footer-about {
+    grid-column: 3 / 4;
+  }
+
+  #footer .footer-contact {
+    grid-column: 4 / 5;
+  }
+
+  #footer .footer-about,
+  #footer .footer-contact{
+    padding: 0 3rem;
   }
 
 }
