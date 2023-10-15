@@ -63,7 +63,7 @@ const imageSlideFromLeft = {
   distance: '80px',
   duration: 1900,
   origin: 'left',
-  scale: 0.8
+  scale: 0.8,
 }
 
 ScrollReveal().reveal('[data-image-slide-from-left]', imageSlideFromLeft);
@@ -101,7 +101,7 @@ window.addEventListener('resize', function(event){
 
 
 /**
-   * MOBILE MENU
+   * MOBILE MENU TOGGLE
     */
 
 const offcanvasMenu = document.querySelector('[data-offcanvas-menu]'),
@@ -115,6 +115,18 @@ if( offcanvasMenuToggler ){
 
     const header = document.querySelector('[data-header]')
     header.classList.toggle('active-offcanvas')
+
+    if ( offcanvasMenu.classList.contains('active') ){
+      document.body.style.overflow = 'hidden'
+      ScrollReveal().reveal('.offcanvas-logo img', imageSlideFromLeft);
+      ScrollReveal().reveal('.offcanvas-navigation', textContentSlideFromBottom);
+    } else {
+      document.body.style.overflow = ''
+      document.querySelector('.offcanvas-logo img').removeAttribute('style')
+      document.querySelector('.offcanvas-logo img').removeAttribute('data-sr-id')
+      document.querySelector('.offcanvas-navigation').removeAttribute('style')
+      document.querySelector('.offcanvas-navigation').removeAttribute('data-sr-id')
+    }
   })
 }
 

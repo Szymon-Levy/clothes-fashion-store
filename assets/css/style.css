@@ -454,16 +454,33 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 #menu-toggler span{
   width: 100%;
   height: 1px;
   background-color: var(--color-black);
+  transition: transform var(--transition-time-400);
 }
 
 .active-offcanvas #menu-toggler span{
   background-color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.active-offcanvas #menu-toggler span:nth-child(1){
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.active-offcanvas #menu-toggler span:nth-child(2){
+  display: none;
+}
+
+.active-offcanvas #menu-toggler span:nth-child(3){
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 
@@ -546,6 +563,19 @@ body{
   }
 }
 
+.offcanvas-menu .offcanvas-container {
+  padding: 8rem var(--side-space-fixed);
+  position: relative;
+  transition: var(--transition-time-400);
+}
+
+.offcanvas-menu.inactive .offcanvas-container {
+  opacity: 0;
+}
+
+.offcanvas-menu .offcanvas-logo img{
+  max-width: 60px;
+}
 
 
 /*----------------------------------*\
