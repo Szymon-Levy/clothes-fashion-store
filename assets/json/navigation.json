@@ -5,14 +5,14 @@
   },
   {
     "name": "Shop",
-    "url": "/shop"
+    "url": "/shop.html"
   },
   {
     "name": "Cart",
-    "url": "/cart"
+    "url": "/cart.html"
   },
   {
     "name": "Contact",
-    "url": "/contact"
+    "url": "/contact.html"
   }
 ]

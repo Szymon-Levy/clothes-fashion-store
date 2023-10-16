@@ -566,17 +566,81 @@ body{
 .offcanvas-menu .offcanvas-container {
   padding: 8rem var(--side-space-fixed);
   position: relative;
-  transition: var(--transition-time-400);
+  z-index: 2;
 }
 
 .offcanvas-menu.inactive .offcanvas-container {
-  opacity: 0;
+  visibility: hidden;
+}
+
+.offcanvas-menu .offcanvas-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .offcanvas-menu .offcanvas-logo img{
   max-width: 60px;
 }
 
+.offcanvas-navigation{
+  margin-top: 5rem;
+}
+
+.offcanvas-navigation .nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-navigation .nav-list .nav-list-item {
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.offcanvas-navigation .nav-list .nav-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.offcanvas-navigation .nav-list .nav-list-item .nav-list-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-newsletter-bg);
+  font-family: var(--ff-title);
+  font-weight: 400;
+  font-size: 2.5rem;
+  position: relative;
+  text-transform: uppercase;
+  outline: none;
+  transition: margin-left var(--transition-time-400);
+}
+
+.offcanvas-navigation .nav-list .nav-list-item .nav-list-link::before{
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: var(--color-newsletter-bg);
+  transition: width var(--transition-time-400), margin-right var(--transition-time-400);
+}
+
+.offcanvas-navigation .nav-list .nav-list-item.active .nav-list-link::before,
+.offcanvas-navigation .nav-list .nav-list-item .nav-list-link:focus-visible:before,
+.offcanvas-navigation .nav-list .nav-list-item .nav-list-link:hover:before{
+  margin-right: 2.8rem;
+  width: 30px;
+}
+
+.offcanvas-menu .offvanvas-image{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 1;
+}
+
+.offcanvas-menu .offvanvas-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /*----------------------------------*\
   #HOME SECTION
@@ -711,6 +775,30 @@ body{
 
 
   /*----------------------------------*\
+    #OFFCANVAS MENU
+  \*----------------------------------*/
+
+  .offcanvas-menu .offcanvas-logo img {
+    max-width: 90px;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item {
+    margin-bottom: 3rem;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link {
+    font-size: 4.5rem;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item.active .nav-list-link::before, 
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link:focus-visible:before, 
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link:hover:before {
+    margin-right: 3.5rem;
+    width: 50px;
+  }
+
+
+  /*----------------------------------*\
     #NEWSLETTER CALL TO ACTION
   \*----------------------------------*/
 
@@ -758,6 +846,43 @@ body{
 }
 
 @media screen and (min-width: 992px) {
+
+  /*----------------------------------*\
+    #OFFCANVAS MENU
+  \*----------------------------------*/
+
+  .offcanvas-menu .offcanvas-container {
+    padding: 8rem;
+  }
+
+  .offcanvas-navigation {
+    padding-left: 30%;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item {
+    margin-bottom: 4rem;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link {
+    font-size: 8rem;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item.active .nav-list-link, 
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link:focus-visible, 
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link:hover {
+    margin-left: -50px;
+  }
+
+  .offcanvas-navigation .nav-list .nav-list-item.active .nav-list-link::before, 
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link:focus-visible:before, 
+  .offcanvas-navigation .nav-list .nav-list-item .nav-list-link:hover:before {
+    margin-right: 5rem;
+    width: 130px;
+  }
+
+  .offcanvas-menu .offvanvas-image {
+    width: 35%;
+  }
 
 
   /*----------------------------------*\
@@ -1103,6 +1228,14 @@ body{
 
   .bg-text span {
     font-size: 2.1em;
+  }
+
+  /*----------------------------------*\
+    #OFFCANVAS MENU
+  \*----------------------------------*/
+
+  .offcanvas-menu .offvanvas-image {
+    width: 25%;
   }
 }
 
