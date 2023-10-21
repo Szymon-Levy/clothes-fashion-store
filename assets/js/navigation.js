@@ -8,7 +8,6 @@ const generateNavList = (menuItems) => {
   navList.classList.add('nav-list')
 
   let currentUrl = window.location.pathname
-  console.log(currentUrl)
 
   menuItems.forEach(item => {
     const navItem = document.createElement('li')
@@ -18,9 +17,7 @@ const generateNavList = (menuItems) => {
     navLink.classList.add('nav-list-link')
     navLink.innerText = item.name
     navLink.href = item.url
- 
     
-
     navItem.append(navLink)
     navList.append(navItem)
   });

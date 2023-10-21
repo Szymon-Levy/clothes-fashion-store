@@ -63,9 +63,13 @@
         <div class="offcanvas-navigation" data-navigation>
         </div>
       </div>
+
       <div class="offvanvas-image" aria-hidden="true">
         <img src="/assets/images/offcanvas-image.webp" alt="offcanvas menu image">
       </div>
+
+      <button id="menu-close" class="close-modal" data-offcanvas-close aria-label="Close the menu">
+      </button>
     </nav>
 
     <!--
@@ -83,8 +87,8 @@
 
           <div class="header-spacer container"></div>
 
-          <div class="menu-toggle">
-            <button id="menu-toggler" data-offcanvas-toggler aria-label="Open the menu">
+          <div class="menu-opener">
+            <button id="menu-toggler" data-offcanvas-open aria-label="Open the menu">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
@@ -187,7 +191,7 @@
               <p>Eu, est arcu, vestibulum egestas quam ac sed egestas aliquet. Diam massa magnis mi, tortor, sit. Rhoncus phasellus habitant at turpis proin nibh suspendisse.</p>
             </div>
             <div class="button-column">
-              <button class="filled-btn">subscribe</button>
+              <button class="filled-btn" data-newsletter-popup-open >subscribe</button>
             </div>
           </div>
         </div>

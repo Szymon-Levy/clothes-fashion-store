@@ -1,2 +1,2 @@
 - newsletter popup
-- video reset autoplay
+- produkty w json
