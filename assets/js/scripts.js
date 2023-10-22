@@ -253,17 +253,50 @@ const $openNewsletterSignUpBtn = document.querySelector('[data-newsletter-popup-
 
 if ( $openNewsletterSignUpBtn ){
   const addEmailSubmit = (e)=>{
-    const showError = (message)=> {
-      
+    const showError = (input, message)=> {
+      const existingError = input.closest('.form-field-wrapper').querySelector('.input-error')
+      if( existingError == null ){
+        const error = document.createElement('span')
+        error.classList.add('input-error')
+        error.textContent = message
+        input.closest('.form-field-wrapper').append(error)
+      } else{
+        existingError.textContent = message
+      }
     }
 
     e.preventDefault()
     const form = e.target
-    const submittedValue = form.querySelector('[data-email]').value.trim()
+    const emailInput = form.querySelector('[data-email]')
+    const submittedValue = emailInput.value.trim().toLowerCase()
 
 
     if (submittedValue == ''){
-      console.log(submittedValue)
+      showError(emailInput, 'Field cannot be empty.')
+    }else{
+      const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+      if ( submittedValue.match(emailRegex) ){
+        const emailsList = localStorage.getItem('emails-list')
+        const showSuccesMessage = () =>{
+          'informacja o tym że email został dodany do newslettera'
+        }
+        
+        if ( emailsList == null ){
+          const emailList = JSON.stringify([submittedValue])
+          localStorage.setItem('emails-list', emailList)
+          showSuccesMessage()
+        } else{
+          const currentList = JSON.parse(emailsList)
+          if ( currentList.includes(submittedValue) ) {
+            showError(emailInput, 'Email already added to list.')
+          }else{
+            currentList.push(submittedValue)
+            const emailList = JSON.stringify(currentList)
+            localStorage.setItem('emails-list', emailList)
+            showSuccesMessage()
+          }
+        }
+      } else{showError(emailInput, 'Incorrect email format.')}
     }
   }
 
