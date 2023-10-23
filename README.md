@@ -1,3 +1,3 @@
 # Clothes fashion store
 
-![home section image](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![home section image](https://raw.githubusercontent.com/Szymon-Levy/clothes-fashion-store/main/readme/home-section.jpg)
