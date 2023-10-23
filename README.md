@@ -4,4 +4,4 @@
 
 ## Technologies used
 
-⋅⋅* Unordered sub-list. 
+* HTML 
