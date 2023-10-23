@@ -2,6 +2,8 @@
 
 ![home section image](https://raw.githubusercontent.com/Szymon-Levy/clothes-fashion-store/main/readme/home-section.jpg)
 
+Modern clothes shop with grid lines. Minimal and elegant design.
+
 ## Used Languages
 
 * HTML 
@@ -24,7 +26,7 @@
 
 ## Includes Pages
 
-* home
-* shop
-* cart
-* contact
+* index.html
+* shop.html
+* cart.html
+* contact.html
