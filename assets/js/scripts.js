@@ -252,6 +252,7 @@ if ( $videoPopupsImagesElements.length ){
 const $openNewsletterSignUpBtn = document.querySelector('[data-newsletter-popup-open]')
 
 if ( $openNewsletterSignUpBtn ){
+
   const addEmailSubmit = (e)=>{
     const showError = (input, message)=> {
       const existingError = input.closest('.form-field-wrapper').querySelector('.input-error')
@@ -278,7 +279,16 @@ if ( $openNewsletterSignUpBtn ){
       if ( submittedValue.match(emailRegex) ){
         const emailsList = localStorage.getItem('emails-list')
         const showSuccesMessage = () =>{
-          'informacja o tym że email został dodany do newslettera'
+          const newsletterPopupContent = document.querySelector('.newsletter-popup-wrapper .content-column')
+          const newsletterPopupForm = document.querySelector('.newsletter-popup-wrapper form')
+          const newsletterPopupFormHeight = newsletterPopupForm.offsetHeight
+          console.log(newsletterPopupFormHeight)
+          const message = document.createElement('div')
+          message.classList.add('added-email-message')
+          message.innerHTML = `<p>Your email address <strong>(${submittedValue})</strong> has been added to the newsletter list.</p>`
+          message.style.minHeight = newsletterPopupFormHeight + 'px'
+          newsletterPopupForm.remove()
+          newsletterPopupContent.append(message)
         }
         
         if ( emailsList == null ){

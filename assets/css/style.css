@@ -473,6 +473,12 @@ form input:focus-visible{
   margin-bottom: 1rem;
 }
 
+.newsletter-popup-wrapper .content-column .added-email-message {
+  display: flex;
+  align-items: flex-end;
+  font-size: 15px;
+}
+
 .newsletter-popup-wrapper .image-column {
   display: none;
   position: relative;
@@ -981,6 +987,13 @@ form input:focus-visible{
   
   .newsletter-popup-wrapper .content-column{
     padding: 3rem 3.5rem 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .newsletter-popup-wrapper .content-column .added-email-message {
+    padding-right: 10%;
   }
 
   .newsletter-popup-wrapper form{
