@@ -1639,6 +1639,9 @@ form input:focus-visible{
   #header {
     padding: 67px 0;
     width: 100%;
+  }
+
+  .home-page #header {
     position: absolute;
   }
 
