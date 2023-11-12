@@ -15,5 +15,4 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /domains/levywebdev.pl/public_html/fashion/
-        protocol: ftps
-        port: 222
+        protocol: ftp
