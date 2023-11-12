@@ -11,8 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: s129.cyber-folks.pl
+        server: 195.242.116.113
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /domains/levywebdev.pl/public_html/fashion/
-        port: 222
