@@ -14,4 +14,4 @@ jobs:
         server: ftp.samkirkland.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /domains/levywebdev.pl/public_html/fashion
+        server-dir: /domains/levywebdev.pl/public_html/fashion/
