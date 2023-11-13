@@ -14,4 +14,4 @@ jobs:
         target-server: 195.242.116.113
         remote-user: gajjzzyubb
         private-ssh-key: ${{ secrets.SSH_KEY }}
-        destination-path: /domains/levywebdev.pl/public_html/fashion
+        destination-path: ~/domains/levywebdev.pl/public_html/fashion/
