@@ -1,7 +1,20 @@
-name: 📂 Synchronisation des fichiers
-uses: SamKirkland/FTP-Deploy-Action@3.1.1
- with:
-  ftp-server: sftp://s129.cyber-folks.pl
-  ftp-username: ${{ secrets.ftp_username }}
-  ftp-password: ${{ secrets.ftp_password }}
-  git-ftp-args: --insecure
+on:
+  push:
+    branches:
+      - main
+name: 🚀 Deploy on push to staging
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+        
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        with:
+          FTP_SERVER: s129.cyber-folks.pl
+          FTP_USERNAME: ${{ secrets.ftp_username }}
+          FTP_PASSWORD: ${{ secrets.ftp_password }}
+          server-dir: /domains/levywebdev.pl/public_html/fashion/
