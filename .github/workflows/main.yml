@@ -13,7 +13,7 @@ jobs:
         
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
-        with:
+        env:
           FTP_SERVER: s129.cyber-folks.pl
           FTP_USERNAME: ${{ secrets.ftp_username }}
           FTP_PASSWORD: ${{ secrets.ftp_password }}
