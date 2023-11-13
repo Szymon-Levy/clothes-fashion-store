@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync Files
       uses: SamKirkland/web-deploy@v1
       with:
-        target-server: 195.242.116.113
+        target-server: s129.cyber-folks.pl
         remote-user: gajjzzyubb
         private-ssh-key: ${{ secrets.SSH_KEY }}
         destination-path: ~/domains/levywebdev.pl/public_html/fashion/
