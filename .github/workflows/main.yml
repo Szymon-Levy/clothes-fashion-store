@@ -1,7 +1,7 @@
-- name: 📂 Synchronisation des fichiers
-  uses: SamKirkland/FTP-Deploy-Action@3.1.1
-  with:
-    ftp-server: sftp://s129.cyber-folks.pl
-    ftp-username: ${{ secrets.ftp_username }}
-    ftp-password: ${{ secrets.ftp_password }}
-    git-ftp-args: --insecure
+name: 📂 Synchronisation des fichiers
+uses: SamKirkland/FTP-Deploy-Action@3.1.1
+ with:
+  ftp-server: sftp://s129.cyber-folks.pl
+  ftp-username: ${{ secrets.ftp_username }}
+  ftp-password: ${{ secrets.ftp_password }}
+  git-ftp-args: --insecure
