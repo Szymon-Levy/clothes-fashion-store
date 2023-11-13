@@ -14,4 +14,4 @@ jobs:
         ftp-server: s129.cyber-folks.pl
         ftp-username: ${{ secrets.ftp_username }}
         ftp-password: ${{ secrets.ftp_password }}
-        server-dir: /domains/levywebdev.pl/public_html/fashion/
+        entryPoint: /domains/levywebdev.pl/public_html/fashion/
