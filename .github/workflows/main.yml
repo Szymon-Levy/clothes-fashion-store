@@ -15,4 +15,3 @@ jobs:
         remote-user: gajjzzyubb
         private-ssh-key: ${{ secrets.SSH_KEY }}
         destination-path: ~/domains/levywebdev.pl/public_html/fashion/
-        ssh-port: 222
