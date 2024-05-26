@@ -13,8 +13,6 @@ Modern clothes shop with grid lines. Minimal and elegant design.
 ## Used libraries
 
 * ScrollReveal
-* Vanilla JavaScript Fullscreen Lightbox
-* Swiper
 * Material Icons
 
 ## Features and components
