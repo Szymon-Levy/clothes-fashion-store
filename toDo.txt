@@ -1,2 +1,0 @@
-- newsletter popup
-- produkty w json
