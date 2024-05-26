@@ -1,6 +1,7 @@
 # Clothes fashion store
 
-![home section image](https://raw.githubusercontent.com/Szymon-Levy/clothes-fashion-store/main/readme/home-section.jpg)
+![home-section](https://github.com/Szymon-Levy/clothes-fashion-store/assets/94991990/ad8ded20-cf89-4f1d-951c-9c02cf94df67)
+
 
 Modern clothes shop with grid lines. Minimal and elegant design.
 
